@@ -430,12 +430,12 @@ class Generator:
    
                     cg.add(
                         var_item.set_device_class(
-                            config_item[CONF_DEVICE_CLASS]
+                            "temperature"
                         )
                     )
                     cg.add(
                         var_item.set_unit_of_measurement(
-                            config_item[CONF_UNIT_OF_MEASUREMENT]
+                            "%"
                         )
                     )
                  
