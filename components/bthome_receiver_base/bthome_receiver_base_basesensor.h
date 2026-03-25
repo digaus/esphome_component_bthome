@@ -17,8 +17,11 @@ namespace esphome
     class BTHomeReceiverBaseBaseSensor
     {
     public:
+
       bthome_base::bthome_measurement_t get_measurement_type() { return this->measurement_type_; };
       void set_measurement_type(bthome_base::bthome_measurement_t measurement_type) { measurement_type_ = measurement_type; };
+      void set_unit_of_measurement(String v) {  };
+      void set_device_class(String v) {  };
 
       int compare(const bthome_base::bthome_measurement_t measurement_type) { return (this->measurement_type_ > measurement_type) - (this->measurement_type_ < measurement_type); }
 
