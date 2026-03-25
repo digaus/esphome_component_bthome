@@ -31,6 +31,10 @@ namespace esphome
       {
         return sensor::Sensor::get_name();
       }
+
+      public:
+        void set_device_class(std::string d) { }
+        void set_unit_of_measurement(std::string d) { }
     };
   }
 }
