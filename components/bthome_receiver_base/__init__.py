@@ -427,18 +427,6 @@ class Generator:
                                 measurement_type_record[CONF_MEASUREMENT_TYPE])
                         )
                     )
-   
-                    cg.add(
-                        var_item.set_device_class(
-                            "temperature"
-                        )
-                    )
-                    cg.add(
-                        var_item.set_unit_of_measurement(
-                            "%"
-                        )
-                    )
-                 
                     if (
                         measurement_type_record.get(CONF_ACCURACY_DECIMALS)
                         and not CONF_ACCURACY_DECIMALS in config_item
