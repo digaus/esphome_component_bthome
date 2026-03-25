@@ -468,9 +468,9 @@ class Generator:
                         )
                     )
                     cg.add(
-                         var_item.set_device_class(
-                             config_item[CONF_DEVICE_CLASS]
-                         )
+                        var_item.set_device_class(
+                            config_item[CONF_DEVICE_CLASS]
+                        )
                      )
                      cg.add(
                          var_item.set_unit_of_measurement(
