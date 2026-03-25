@@ -467,16 +467,17 @@ class Generator:
                             config_item[CONF_MEASUREMENT_TYPE]
                         )
                     )
-                    cg.add(
-                        var_item.set_device_class(
-                            config_item[CONF_DEVICE_CLASS]
-                        )
+                 
+                cg.add(
+                    var_item.set_device_class(
+                        config_item[CONF_DEVICE_CLASS]
                     )
-                    cg.add(
-                        var_item.set_unit_of_measurement(
-                            config_item[CONF_UNIT_OF_MEASUREMENT]
-                        )
+                )
+                cg.add(
+                    var_item.set_unit_of_measurement(
+                        config_item[CONF_UNIT_OF_MEASUREMENT]
                     )
+                )
                 # last statement - add the sensor
                 cg.add(
                     paren.add_sensor(
