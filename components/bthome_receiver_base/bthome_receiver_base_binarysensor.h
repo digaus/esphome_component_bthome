@@ -22,6 +22,7 @@ namespace esphome
     class BTHomeReceiverBaseBinarySensor : public binary_sensor::BinarySensor,
                                            public BTHomeReceiverBaseBaseSensor
     {
+      void set_device_class(String d) { }
       void publish_data(float value) override
       {
         this->publish_state(value != 0.0); // TODO
