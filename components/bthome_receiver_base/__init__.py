@@ -410,7 +410,7 @@ class Generator:
             # iterate around the subsensors
             for i, config_item in enumerate(config_sensors_arr):
                 var_item = cg.new_Pvariable(config_item[CONF_ID])
-
+             
                 if devs.get_name_prefix():
                     config_item[CONF_NAME] = (
                         devs.get_name_prefix() + " " + config_item[CONF_NAME]
@@ -467,7 +467,16 @@ class Generator:
                             config_item[CONF_MEASUREMENT_TYPE]
                         )
                     )
-
+                    cg.add(
+                         var_item.set_device_class(
+                             config_item[CONF_DEVICE_CLASS]
+                         )
+                     )
+                     cg.add(
+                         var_item.set_unit_of_measurement(
+                             config_item[CONF_UNIT_OF_MEASUREMENT]
+                         )
+                     )
                 # last statement - add the sensor
                 cg.add(
                     paren.add_sensor(
