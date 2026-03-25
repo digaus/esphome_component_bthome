@@ -427,7 +427,18 @@ class Generator:
                                 measurement_type_record[CONF_MEASUREMENT_TYPE])
                         )
                     )
-
+   
+                    cg.add(
+                        var_item.set_device_class(
+                            config_item[CONF_DEVICE_CLASS]
+                        )
+                    )
+                    cg.add(
+                        var_item.set_unit_of_measurement(
+                            config_item[CONF_UNIT_OF_MEASUREMENT]
+                        )
+                    )
+                 
                     if (
                         measurement_type_record.get(CONF_ACCURACY_DECIMALS)
                         and not CONF_ACCURACY_DECIMALS in config_item
@@ -467,17 +478,7 @@ class Generator:
                             config_item[CONF_MEASUREMENT_TYPE]
                         )
                     )
-                 
-                cg.add(
-                    var_item.set_device_class(
-                        config_item[CONF_DEVICE_CLASS]
-                    )
-                )
-                cg.add(
-                    var_item.set_unit_of_measurement(
-                        config_item[CONF_UNIT_OF_MEASUREMENT]
-                    )
-                )
+              
                 # last statement - add the sensor
                 cg.add(
                     paren.add_sensor(
